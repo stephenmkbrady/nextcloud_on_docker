@@ -44,7 +44,12 @@ address = ":8080"
 
 [api]
   entryPoint = "traefik"
+{% if traefik_api_user is defined %}
   dashboard = true
+{% else %}
+  dashboard = false
+{% endif %}
+
 
 [docker]
 
